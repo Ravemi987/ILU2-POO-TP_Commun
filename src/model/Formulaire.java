@@ -1,13 +1,29 @@
 package model;
 
 public abstract class Formulaire {
+	private int jour;
+	private int mois;
+	private int id;
 	
-	public abstract int getJour();
+	protected Formulaire(int jour, int mois) {
+		this.jour = jour;
+		this.mois = mois;
+		this.id = 0;
+	}
 	
-	public abstract int getMois();
+	public int getJour() {
+		return jour;
+	}
 	
-	public abstract int getIdentificationEntite();
+	public int getMois() {
+		return mois;
+	}
 	
-	public abstract void setIdentificationEntite(int i);
-
+	public int getIdentificationEntite() {
+		return id;
+	}
+	
+	public void setIdentificationEntite(int i) {
+		this.id = i;
+	}
 }

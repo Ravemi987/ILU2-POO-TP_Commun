@@ -7,14 +7,13 @@ public class ReservationSpectacle extends Reservation {
 	private int numChaise;
 	
 	public ReservationSpectacle(int jour, int mois, int zone, int chaise) {
-		this.jour = jour;
-		this.mois = mois;
+		super(jour, mois);
 		this.numZone = zone;
 		this.numChaise = chaise;
 	}
 	
 	@Override
 	public String toString() {
-		return "Le " + jour + "/" + mois + "\nchaise n°" + numChaise + " réservée dans la zone " + numZone + ".\n ";
+		return super.toString() + "Chaise n°" + numChaise + " réservée dans la zone " + numZone + ".\n ";
 	}
 }
